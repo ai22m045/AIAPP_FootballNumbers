@@ -1,0 +1,10 @@
+Collection of used commands to train, predict and validate on test data:
+
+train:
+yolo task=detect mode=train model=yolov8s.pt data=American-Football-Number/data.yaml epochs=300 imgsz=640 plots=True
+
+validate on test data:
+yolo task=detect mode=val model=trainColabModels/GS/train/weights/best.pt data=American-Football-Number-GS/data.yaml
+
+predict (in sourcecode:)
+model.predict("test5.mp4", show=True, save=True, save_txt=True, show_labels=True)
